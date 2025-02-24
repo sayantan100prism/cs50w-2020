@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable - counter</title>
+    <script>
+        
+        function hello(){
+            document.querySelector('h1').innerHTML = 'Goodbye';
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Hello !</h1>
+    <h3>document query selector look through the document and find the first element that matches the query</h3>
+    and then use .innerhtml to change the content of the element,like here we are changing the content of h1 tag to 'Goodbye'
+    </h3><button onclick="hello()">Click here</button>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable - counter</title>
+    <script>
+        
+        function hello(){
+            // "===" means strictly equal to, i.e it will check the value and the type of the value both are equal or not
+            // like here we are checking if the content of h1 tag is 'Hello !' then change it to 'Goodbye' else change it to 'Hello !'
+
+            // "==": it will only check the value of the variable, not the type of the variable
+            if(document.querySelector('h1').innerHTML === 'Hello !')  
+            {
+                document.querySelector('h1').innerHTML = 'Goodbye';
+            }
+            else{
+                document.querySelector('h1').innerHTML = 'Hello !';
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Hello !</h1>
+    <h3>now we are using if else condition to toggle between hello and goodbye </h3>
+    
+    </h3><button onclick="hello()">Click here</button>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable - counter</title>
+    <script>
+        
+        function hello(){
+            let heading = document.querySelector('h1');
+            if(heading.innerHTML === 'Hello !')  
+            {
+                heading.innerHTML = 'Goodbye';
+            }
+            else{
+                heading.innerHTML = 'Hello !';
+            }
+
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Hello !</h1>
+    <h3>now we are using if else condition to toggle between hello and goodbye </h3>
+    
+    </h3><button onclick="hello()">Click here</button>
+
+</body>
+</html> -->
