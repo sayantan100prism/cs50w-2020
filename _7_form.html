@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form>
+        <input autofocus id ="name" type="text" placeholder="Enter your name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('form').onsubmit = function(){
+                const name = document.querySelector('#name').value;
+                alert(`Hello, ${name}!`);
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>also while calling const name we can specify what we want to fetch by
+
+    1. document.querySelector('tag')
+    2. document.querySelector('#id')
+    3. document.querySelector('.class')
+        
+        
+        .onsubmit refers to the event that occurs when a form is submitted,
+
+        so here the functionality that we would like to potray is that
+        when the user enters his name in the input field and clicks on the submit button
+        then an alert box should pop up with the message "Hello, <name>!" where <name> is the name entered by the user
+    </h2>
+    <form>
+        <input autofocus id ="name" type="text" placeholder="Enter your name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

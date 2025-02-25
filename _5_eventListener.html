@@ -1,0 +1,66 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable - counter</title>
+    <script>
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            if(counter % 10 === 0){
+                alert('Counter is at ' + counter);
+            }
+        }
+        document.querySelector('button').onclick=count;
+        
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <h3>here the button is not working as the body of the html is loaded before the script 
+        so the button is not able to find the function count() so we have to use event listener 
+        to make the button work</h3>
+    </h3><button>Count</button>
+
+</body>
+</html> -->
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable - counter</title>
+    <script>
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            if(counter % 10 === 0){
+                alert('Counter is at ' + counter);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('button').onclick=count;
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <h3>here adding addEventListener will first check if the required event has happened or not ,
+        if the event has happened then it will call the function count() {but here instead of calling count() 
+            we are calling the function as function() so this is called anonymous function }
+            and the button will work properly
+    </h3>
+    </h3><button>Count</button>
+
+</body>
+</html> -->
