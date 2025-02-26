@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#red').onclick = function(){
+                document.querySelector('h1').style.color = 'red';
+            };
+        });
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#blue').onclick = function(){
+                document.querySelector('h1').style.color = 'blue';
+            };
+        });
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#green').onclick = function(){
+                document.querySelector('h1').style.color = 'green';
+            };
+        });
+    </script>
+</head>
+<body>
+    <h1 id="Hello">Hello!</h1>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelectorAll('button').forEach(function(button){
+                button.onclick = function(){
+                    document.querySelector('h1').style.color = button.dataset.color;
+                };
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="Hello">Hello!</h1>
+    <h3>adding data attributes which says about the data of
+         color that i would specify when i will click the button
+        
+        also document.querySelector will fetch only one element
+    if we want to fetch multiple element then we would need 
+document.querySelectorAll as this will give javascript array which is equivalent of list consisting of all the elements
+like [button,button, button]</h3>
+    <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button>
+    
+</body>
+</html> 
+

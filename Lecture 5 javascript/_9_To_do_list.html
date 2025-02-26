@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            
+            //by default, the submit button is disabled
+            document.querySelector('#submit').disabled = true;
+
+            //enable button only if there is text in the input field
+            document.querySelector('#task').onkeyup = () => {
+
+                //if the length of the input field is greater than 0, then the submit button will be enabled 
+                //this ensures that after i submit a task, the submit button will be disabled until i enter a new task
+                if(document.querySelector('#task').value.length > 0){
+                    document.querySelector('#submit').disabled = false;
+                }
+                else{
+                    document.querySelector('#submit').disabled = true;
+                }
+            }
+
+            document.querySelector('form').onsubmit = () => {
+                const task = document.querySelector('#task').value;// this wii get the value of the input field
+                
+                //console.log(task);// this will show the task to the console
+
+                const li = document.createElement('li');// this will create a new list item that will be added to the unordered list and will save the task in variable li
+                li.innerHTML = task;// this will set the innerHTML of the list item to the task
+
+                document.querySelector('#tasks').append(li);// this will append the list item li , to the unordered list
+                document.querySelector('#task').value = '';// this will clear the input field after the task is added where #task is the input field and the value is set to empty string
+                
+                document.querySelector('#submit').disabled = true; // this will disable the submit button after the task is added
+                
+                //stop form from submitting
+                return false;// this will prevent the form from submitting
+
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <ul id="tasks">
+    </ul>
+    Above this, there will be an unordered list where the tasks will be displayed
+        <form >
+
+            <input type="text" id="task" placeholder="Enter Task">
+            <input id="submit" type="submit">
+
+        </form>
+    
+    <h2>() => same as function()</h2>
+</body>
+</html>
